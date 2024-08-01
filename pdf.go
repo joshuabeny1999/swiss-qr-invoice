@@ -94,7 +94,7 @@ func receivingInformation(doc *wrapper.Doc, inv Invoice) error {
 	if inv.Reference == "" {
 		yPayeeBase -= doc.LineHeight(6) + doc.LineHeight(8)
 	}
-	doc.AddFormattedText(5, yPayeeBase, "Zahlbar durch", 6, "bold")
+	doc.AddFormattedText(5, yPayeeBase, "Zahlbar durch (Name/Adresse)", 6, "bold")
 	yPayeeBase += doc.LineHeight(8)
 	if inv.noPayee() {
 		emptyFields(doc, 5, yPayeeBase, 57, yPayeeBase+20)
