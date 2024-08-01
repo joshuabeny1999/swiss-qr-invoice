@@ -224,7 +224,7 @@ func paymentInformation(doc *wrapper.Doc, inv Invoice) error {
 	if inv.AdditionalInfo == "" {
 		yPayeeBase -= doc.LineHeight(8) + doc.LineHeight(10)
 	}
-	doc.AddFormattedText(118, yPayeeBase, "Zahlbar durch", 8, "bold")
+	doc.AddFormattedText(118, yPayeeBase, "Zahlbar durch (Name/Adresse)", 8, "bold")
 	yPayeeBase += doc.LineHeight(8)
 	if inv.noPayee() {
 		emptyFields(doc, 118, yPayeeBase+doc.LineHeight(8), 118+65, yPayeeBase+doc.LineHeight(8)+25)
