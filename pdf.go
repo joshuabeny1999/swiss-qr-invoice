@@ -3,9 +3,9 @@ package swissqrinvoice
 import (
 	"fmt"
 
-	wrapper "github.com/72nd/gopdf-wrapper"
-	"github.com/72nd/gopdf-wrapper/fonts"
-	"github.com/72nd/swiss-qr-invoice/assets"
+	wrapper "github.com/joshuabeny1999/gopdf-wrapper"
+	"github.com/joshuabeny1999/gopdf-wrapper/fonts"
+	"github.com/joshuabeny1999/swiss-qr-invoice/assets"
 	"github.com/signintech/gopdf"
 	"github.com/skip2/go-qrcode"
 )

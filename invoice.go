@@ -8,8 +8,8 @@ import (
 	"strings"
 	"text/template"
 
-	wrapper "github.com/72nd/gopdf-wrapper"
 	"github.com/creasty/defaults"
+	wrapper "github.com/joshuabeny1999/gopdf-wrapper"
 	"github.com/signintech/gopdf"
 	"gopkg.in/yaml.v2"
 )
@@ -149,6 +149,9 @@ EPD
 	refType := "QRR"
 	if !i.IsQrIBAN {
 		refType = "SCOR"
+	}
+	if i.Reference == "" {
+		refType = "NON"
 	}
 	payeeAdrType := "S"
 	if i.noPayee() {
